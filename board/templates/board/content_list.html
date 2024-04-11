@@ -1,0 +1,11 @@
+
+{% for object in object_list %}
+<div>
+<a href="{% url 'detail' object.id %}">{{object.title}}</a>
+<div>
+{% endfor %}
+<div>
+    <form action="{% url 'create' %}">
+        <input type="submit" value="글쓰기">
+    </form>
+</div>
